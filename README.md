@@ -51,7 +51,3 @@ vagrant halt
 ```bash
 vagrant destroy -f
 ```
-
-## 📷 Proof of Work
-
-Screenshots or video demonstration are provided via Google Drive link.
