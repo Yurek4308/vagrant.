@@ -1,11 +1,9 @@
-config.vm.box → використовує Ubuntu 22.04 (ubuntu/jammy64)
+config.vm.box — використовує образ Ubuntu 22.04 (jammy64) як стабільну базу для сервера.
 
-network → задає IP 192.168.100.100
+network — задає постійну IP-адресу 192.168.100.100, щоб додаток завжди був доступний у браузері.
 
-provider virtualbox → виділяє:
-2 CPU
-4096 MB RAM
+provider virtualbox — виділяє потужність: 2 CPU та 4096 MB RAM для швидкої роботи Java та Gradle.
 
-provision shell → встановлює Java 17
+provision shell — автоматично встановлює Java 17 (openjdk-17-jdk) при першому запуску системи.
 
-trigger.after up → автоматично запускає Spring Boot додаток
+trigger.after up — автоматично виконує команду ./gradlew bootRun, запускаючи додаток одразу після старту машини.
